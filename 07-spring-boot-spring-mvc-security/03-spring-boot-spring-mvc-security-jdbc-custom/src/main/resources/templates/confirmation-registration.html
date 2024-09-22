@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Registration Confirmation</title>
+</head>
+<body>
+    <h2>User registered successfully!</h2>
+    <ul>
+        <li th:text="'Username: ' + ${user.username}"></li>
+        <li th:text="'First name: ' + ${user.firstName}"></li>
+        <li th:if="${!#strings.isEmpty(user.lastName)}" th:text="'Last name: ' + ${user.lastName}"></li>
+        <li th:text="'Email: ' + ${user.email}"></li>
+    </ul>
+    <hr>
+    <a th:href="@{/show-my-login-page}">Login with new username</a>
+</body>
+</html>
